@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx-app
@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/necipulusoy/applications.git  # kendi repounun URL'si
     targetRevision: HEAD
-    path: .   # ← root dizin 
+    path: .   #  root dizin 
   destination:
     server: https://kubernetes.default.svc
     namespace: default
